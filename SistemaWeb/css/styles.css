@@ -35,3 +35,10 @@
 .bodyBack {
     background-color: #152238;
 }
+.avatar {
+    height: 50px;
+}
+
+.botonForm {
+    padding: 30px;
+}
