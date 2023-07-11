@@ -1,0 +1,2 @@
+ALTER TABLE `equipos` ADD `Codigo_Equipo` VARCHAR(10) NOT NULL;
+ALTER TABLE `equipos` ADD `url_imagen` VARCHAR(100) NOT NULL;
