@@ -6,7 +6,7 @@ header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 
 include_once 'conexionBD.php';
 
-$ID_Solicitante=$_GET['ID_Solicitante'];
+$ID_Solicitante=$_GET['id_usuario'];
 
 $sqlSelect = "SELECT * FROM solicitudes WHERE ID_Solicitante =".$ID_Solicitante;
 $respuesta = $conection -> query ($sqlSelect);
