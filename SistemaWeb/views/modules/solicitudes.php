@@ -4,7 +4,7 @@
 <body>
 
     <div class="divFormulario">
-        <label for="destination" class="form-label">Filtrar por tipo de solicitud</label>
+        <label for="destination" class="form-label">Filtrar por estado de solicitud</label>
         <select id="destination" class="form-control" name="destination">
             <option value="redireccion.php?action=solicitudes">Todas</option>
             <option value="redireccion.php?action=solicitudesaprobadas">Aprobadas</option>

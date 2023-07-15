@@ -4,11 +4,11 @@
 <div class="divFormulario">
   <label for="destination" class="form-label">Filtrar por estado de devolucion</label>
   <select id="destination" class="form-control" name="destination">
-    <option value="redireccion.php?action=devoluciones">Todas</option>
     <option value="redireccion.php?action=devolucionespendientes">Pendientes</option>
+    <option value="redireccion.php?action=devoluciones">Todas</option>
     <option value="redireccion.php?action=devolucionesrecibidas">Finalizadas</option>
   </select>
-<p>Todas</p>
+<p>Pendientes</p>
 </div>
 </body>
 <script>
