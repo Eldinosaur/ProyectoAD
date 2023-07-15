@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCPE</title>
+    <title>SCPE</title>    
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
@@ -21,17 +22,36 @@
         <nav class="navbar navbar-expand-lg navbar-dark bodyBack">
             <div class="container-fluid">
                 <a class="navbar-brand" href="redireccion.php?action=home"> 
-                    <img src="img/plant.png" class="avatar"> </a>  
+                    <img src="img/pc.png" class="avatar"> </a>  
                     <ul class="navbar-nav">
                         <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="redireccion.php?action=home">Home</a>
                         </li>
                     </ul>
-                    
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="redireccion.php?action=home">Equipos</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="redireccion.php?action=home">Usuarios</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="redireccion.php?action=home">Solicitudes</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="redireccion.php?action=home">Devoluciones</a>
+                        </li>
+                    </ul>
                     <div style="color:white">
                     <p>Bienvenido:</p>
                     <?php
-                        //echo $_SESSION['nombre']." ".$_SESSION['apellido'];
+                        echo $_SESSION['nombre']." ".$_SESSION['apellido'];
                         ?>
                         </div>              
                 <button type="button" class="btn btn-danger" id="btnLogout">Logout</button>
