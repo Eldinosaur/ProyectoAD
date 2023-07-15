@@ -1,8 +1,15 @@
 <?php
 class EnlacesPaginas{
     public static function enlacesPaginasModel ($enlacesModel){
-        if($enlacesModel == "invernaderos" ||
-            $enlacesModel == "registrarinvernadero" ){
+        if($enlacesModel == "equipos" ||
+            $enlacesModel == "usuarios" ||
+            $enlacesModel == "solicitudes" ||
+            $enlacesModel == "solicitudesaprobadas" ||
+            $enlacesModel == "solicitudespendientes" ||
+            $enlacesModel == "solicitudesrechazadas" ||
+            $enlacesModel == "devoluciones" ||
+            $enlacesModel == "devolucionespendientes" ||
+            $enlacesModel == "devolucionesrecibidas"){
                 $module = "views/modules/".$enlacesModel.".php";
             }
             else {
