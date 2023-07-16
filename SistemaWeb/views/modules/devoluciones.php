@@ -5,7 +5,7 @@
   <div class="divFormulario">
     <label for="destination" class="form-label">Filtrar por estado de devolucion</label>
     <select id="destination" class="form-control" name="destination">
-      <option value="redireccion.php?action=devoluciones">Todas</option>
+      <option value="redireccion.php?action=devoluciones" selected>Todas</option>
       <option value="redireccion.php?action=devolucionespendientes">Pendientes</option>
       <option value="redireccion.php?action=devolucionesrecibidas">Finalizadas</option>
     </select>
@@ -60,14 +60,14 @@
           } else {
             ?>
         <tr>
-          <td colspan="5">No existen solicitudes registradas</td>
+          <td colspan="5"><center>No existen solicitudes registradas</center></td>
         </tr>
         <?php
           }
         } else {
           ?>
         <tr>
-          <td colspan="5">Error al cargar las solicitudes</td>
+          <td colspan="5"><center>Error al cargar las solicitudes</center></td>
         </tr>
         <?php
         }

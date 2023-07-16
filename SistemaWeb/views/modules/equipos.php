@@ -63,7 +63,7 @@
             } else {
                 ?>
             <tr>
-                <td colspan="3">No existen invernaderos registrados</td>
+                <td colspan="3"><center>No existen equipos registrados</center></td>
             </tr>
             <?php
             } ?>

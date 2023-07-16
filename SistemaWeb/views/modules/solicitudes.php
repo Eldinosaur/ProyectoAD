@@ -6,7 +6,7 @@
     <div class="divFormulario">
         <label for="destination" class="form-label">Filtrar por estado de solicitud</label>
         <select id="destination" class="form-control" name="destination">
-            <option value="redireccion.php?action=solicitudes">Todas</option>
+            <option value="redireccion.php?action=solicitudes" selected>Todas</option>
             <option value="redireccion.php?action=solicitudesaprobadas">Aprobadas</option>
             <option value="redireccion.php?action=solicitudespendientes">Pendientes</option>
             <option value="redireccion.php?action=solicitudesrechazadas">Rechazadas</option>
@@ -81,14 +81,14 @@
                     } else {
                         ?>
                 <tr>
-                    <td colspan="5">No existen solicitudes registradas</td>
+                    <td colspan="5"><center>No existen solicitudes registradas</center></td>
                 </tr>
                 <?php
                     }
                 } else {
                     ?>
                 <tr>
-                    <td colspan="5">Error al cargar las solicitudes</td>
+                    <td colspan="5"><center>Error al cargar las solicitudes</center></td>
                 </tr>
                 <?php
                 }
