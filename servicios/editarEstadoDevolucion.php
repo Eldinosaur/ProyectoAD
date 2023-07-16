@@ -6,7 +6,7 @@ header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 
 include 'conexionBD.php';
 $estado = $_POST['estado'];
-$recibe = $_POST['$recibe'];
+$recibe = $_POST['recibe'];
 $estado_equipo = $_POST['estado_equipo'];
 $observacion = $_POST['observacion'];
 $id = $_POST['id'];

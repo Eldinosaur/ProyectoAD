@@ -6,7 +6,7 @@ header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 
 include 'conexionBD.php';
 $estado = $_POST['estado'];
-$id_aprueba = $_POST['$id_aprueba'];
+$id_aprueba = $_POST['aprueba'];
 $observacion = $_POST['observacion'];
 $id = $_POST['id'];
 
