@@ -74,8 +74,8 @@ $rol = $_POST['rol'];
           <div class="mb-3">
             <label for="rol" class="form-label" style="font-weight:bold;">Rol</label>
             <select class="form-control" name="rol" id="rol">
-                <option value="2" <?php if($rol == 1){echo 'selected';}?>>Estudiante</option>
-                <option value="3" <?php if($rol == 2){echo 'selected';}?>>Docente</option>
+                <option value="2" <?php if($rol == 2){echo 'selected';}?>>Estudiante</option>
+                <option value="3" <?php if($rol == 3){echo 'selected';}?>>Docente</option>
             </select>    
         </div>
           <div>

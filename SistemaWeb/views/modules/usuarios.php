@@ -11,7 +11,7 @@
                 <th scope="col">Nombre</th>
                 <th scope="col">Apellido</th>
                 <th scope="col">Rol</th>
-                <th scope="col">Acciones</th>
+                <th scope="col" colspan="2"><center>Acciones</center></th>
             </tr>
         </thead>
         <tbody>
@@ -45,11 +45,39 @@
                             <?php if ($rol_usuario == 2) {
                                 echo "Estudiante";
                             } else if ($rol_usuario == 3) {
-                                echo "Profesor";
+                                echo "Docente";
                             } ?>
                         </td>
+                    
+                    <?php echo'
+                        <td>
+                        <form action ="redireccion.php?action=editarusuario" method="POST">
+                        <input type="text" name="id" id="id" value="'.$id_usuario.'" hidden>
+                        <input type="text" name="cedula" id="cedula" value="'.$cedula_usuario.'" hidden>
+                        <input type="text" name="nombre" id="nombre" value="'.$nombre_usuario.'" hidden>
+                        <input type="text" name="apellido" id="apellido" value="'.$apellido_usuario.'" hidden>
+                        <input type="text" name="telefono" id="telefono" value="'.$telefono_usuario.'" hidden>
+                        <input type="text" name="rol" id="rol" value="'.$rol_usuario.'" hidden>
+                            <button type="submit" class="btn" title="Editar" style="border:none;">
+                                <img src="img/pencil.png" class ="icons">
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action ="redireccion.php?action=editarclaveusuario" method="POST">
+                        <input type="text" name="id" id="id" value="'.$id_usuario.'" hidden>
+                        <input type="text" name="cedula" id="cedula" value="'.$cedula_usuario.'" hidden>
+                        <input type="text" name="nombre" id="nombre" value="'.$nombre_usuario.'" hidden>
+                        <input type="text" name="apellido" id="apellido" value="'.$apellido_usuario.'" hidden>
+                        <input type="text" name="telefono" id="telefono" value="'.$telefono_usuario.'" hidden>
+                        <input type="text" name="rol" id="rol" value="'.$rol_usuario.'" hidden>
+                            <button type="submit" class="btn" title="Editar" style="border:none;">
+                                <img src="img/editpw.png" class ="icons">
+                            </button>
+                        </form>
+                    </td>
                     </tr>
-                    <?php
+                    ';
                 }
             } else {
                 ?>
