@@ -6,11 +6,11 @@
     <div class="divFormulario">
         <label for="destination" class="form-label">Filtrar por estado de solicitud</label>
         <select id="destination" class="form-control" name="destination">
-            <option value="redireccion.php?action=solicitudesaprobadas">Aprobadas</option>
+            <option value="redireccion.php?action=solicitudescanceladas">Canceladas</option>
             <option value="redireccion.php?action=solicitudes">Todas</option>
+            <option value="redireccion.php?action=solicitudesaprobadas">Aprobadas</option>
             <option value="redireccion.php?action=solicitudespendientes">Pendientes</option>
             <option value="redireccion.php?action=solicitudesrechazadas">Rechazadas</option>
-            <option value="redireccion.php?action=solicitudescanceladas">Canceladas</option>
             <option value="redireccion.php?action=solicitudesfinalizadas">Finalizadas</option>
         </select>
         <br>
@@ -27,7 +27,7 @@
             </thead>
             <tbody>
                 <?php
-                $url = 'http://laboratoriosad.000webhostapp.com/listarSolicitudesAprobadas.php';
+                $url = 'http://laboratoriosad.000webhostapp.com/listarSolicitudesCanceladas.php';
                 $ch = curl_init($url);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 $json = curl_exec($ch);

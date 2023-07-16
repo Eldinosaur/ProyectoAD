@@ -7,16 +7,23 @@ header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 include_once 'conexionBD.php';
 
 
-$sqlSelect = "SELECT * FROM solicitudes WHERE Estado_Solicitud = 3";
-$respuesta = $conection -> query ($sqlSelect);
-$result = array ();
+$sqlSelect = "SELECT s.*, CONCAT(t.Nombre, ' ', t.Apellido) AS tecnico,
+CONCAT(sol.Nombre, ' ', sol.Apellido) AS solicitante,
+e.Nombre AS equipo
+FROM solicitudes AS s
+JOIN usuarios AS t ON t.ID_Usuario = s.ID_Tecnico_Aprueba
+JOIN usuarios AS sol ON sol.ID_Usuario = s.ID_Solicitante
+JOIN equipos AS e ON e.ID_Equipo = s.ID_Equipo_Solicita
+WHERE Estado_Solicitud = 3";
+$respuesta = $conection->query($sqlSelect);
+$result = array();
 
 
-if ( $respuesta -> num_rows > 0 ){
-    while ( $fila = $respuesta-> fetch_assoc()){
+if ($respuesta->num_rows > 0) {
+    while ($fila = $respuesta->fetch_assoc()) {
         array_push($result, $fila);
     }
-}else {
+} else {
     $result = null;
 }
 

@@ -7,6 +7,8 @@ class EnlacesPaginas{
             $enlacesModel == "solicitudesaprobadas" ||
             $enlacesModel == "solicitudespendientes" ||
             $enlacesModel == "solicitudesrechazadas" ||
+            $enlacesModel == "solicitudescanceladas" ||
+            $enlacesModel == "solicitudesfinalizadas" ||
             $enlacesModel == "devoluciones" ||
             $enlacesModel == "devolucionespendientes" ||
             $enlacesModel == "devolucionesrecibidas"){

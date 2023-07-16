@@ -14,7 +14,7 @@ FROM solicitudes AS s
 JOIN usuarios AS t ON t.ID_Usuario = s.ID_Tecnico_Aprueba
 JOIN usuarios AS sol ON sol.ID_Usuario = s.ID_Solicitante
 JOIN equipos AS e ON e.ID_Equipo = s.ID_Equipo_Solicita
-WHERE Estado_Solicitud = 1";
+WHERE Estado_Solicitud = 5";
 $respuesta = $conection->query($sqlSelect);
 $result = array();
 
