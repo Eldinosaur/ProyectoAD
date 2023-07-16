@@ -31,20 +31,20 @@ $observacion = $_POST['observacion'];
                 success: function (response) {
                     console.log(response);
                     alert("Datos Registrados con Exito");
-                    location.href = "redireccion.php?action=usuarios";
+                    location.href = "redireccion.php?action=solicitudes";
 
                 },
                 error: function (xhr, status, error) {
                     // Handle the error case
                     console.log(xhr.responseText); // Example: Log the error response to the browser console
                     alert("No se Pudieron Registrar los Datos");
-                    location.href = "redireccion.php?action=usuarios";
+                    location.href = "redireccion.php?action=solicitudes";
                 }
             });
         });
     });
     function redirectToBuses() {
-        window.location.href = 'redireccion.php?action=usuarios';
+        window.location.href = 'redireccion.php?action=solicitudes';
     }
 </script>
 
