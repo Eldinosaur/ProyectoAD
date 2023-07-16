@@ -7,7 +7,9 @@ header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 include_once 'conexionBD.php';
 
 
-$sqlSelect = "SELECT * FROM devoluciones WHERE Estado_Devolucion = 1";
+$sqlSelect = "SELECT *
+FROM devoluciones 
+WHERE Estado_Devolucion = 1";
 $respuesta = $conection -> query ($sqlSelect);
 $result = array ();
 

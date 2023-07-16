@@ -8,7 +8,88 @@
     <option value="redireccion.php?action=devoluciones">Todas</option>
     <option value="redireccion.php?action=devolucionespendientes">Pendientes</option>
   </select>
-<p>Finalizadas</p>
+  <br>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">N° Solicitud</th>
+          <th scope="col">Tecnico Responsable</th>
+          <th scope="col">Estado de la Solicitud</th>
+          <th scope="col">Estado del Equipo Recibido</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        $url = 'http://laboratoriosad.000webhostapp.com/listarDevolucionesRecibidas.php';
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $json = curl_exec($ch);
+        // ...
+        
+        if ($json != null) {
+          $obj = json_decode($json);
+          $val = json_decode(json_encode($obj), true);
+
+          if (is_array($val) && count($val) > 0) {
+            foreach ($val as $item) {
+              // Retrieve the values from the $item array
+              $id_devolucion = $item['ID_Devolucion'];
+              $id_solicitud = $item['ID_Solicitud_Devolucion'];
+              $id_tecnico_recibe = $item['ID_Tecnico_Recibe'];
+              $estado_devolucion = $item['Estado_Devolucion'];
+              $estado_equipo = $item['Estado_Equipo_Devuelve'];
+              $observacion = $item['Observacion_Devolucion'];
+              $tecnico = $item['tecnico'];
+
+              // Output the table row
+              ?>
+              <tr>
+                <td>
+                  <?php echo $id_solicitud ?>
+                </td>
+                <td>
+                  <?php echo $tecnico ?>
+                </td>
+                <td>
+                  <?php
+                  switch($estado_devolucion){
+                    case 1: echo "Pendiente"; break;
+                    case 2: echo "Finalizada"; break;
+                  }
+                  ?>
+                </td>
+                <td>
+                  <?php
+                  switch($estado_equipo){
+                    case 1: echo "Funcional"; break;
+                    case 3: echo "Dañado"; break;
+                    case 4: echo "Bloqueado"; break;
+                  }
+                  ?>
+                </td>
+              </tr>
+              <?php
+            }
+          } else {
+            ?>
+        <tr>
+          <td colspan="5">No existen solicitudes registradas</td>
+        </tr>
+        <?php
+          }
+        } else {
+          ?>
+        <tr>
+          <td colspan="5">Error al cargar las solicitudes</td>
+        </tr>
+        <?php
+        }
+        // ...
+        ?>
+
+      </tbody>
+    </table>
 </div>
 </body>
 <script>

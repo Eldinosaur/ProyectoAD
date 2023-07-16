@@ -18,7 +18,6 @@
             <thead>
                 <tr>
                     <th scope="col">N° Solicitud</th>
-                    <th scope="col">Tecnico Responsable</th>
                     <th scope="col">Solicitante</th>
                     <th scope="col">Equipo Solicitado</th>
                     <th scope="col">Estado de la Solicitud</th>
@@ -46,7 +45,6 @@
                             $id_equipo_solicita = $item['ID_Equipo_Solicita'];
                             $estado_solicitud = $item['Estado_Solicitud'];
                             $observacion_solicitud = $item['Observacion_Solicitud'];
-                            $tecnico = $item['tecnico'];
                             $solicitante = $item['solicitante'];
                             $equipo = $item['equipo'];
 
@@ -55,9 +53,6 @@
                             <tr>
                                 <td>
                                     <?php echo $id_solicitud ?>
-                                </td>
-                                <td>
-                                    <?php echo $tecnico ?>
                                 </td>
                                 <td>
                                     <?php echo $solicitante ?>
