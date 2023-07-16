@@ -1,4 +1,9 @@
 <div class="divFormulario">
+    <a class="nav-link active; navTemplate" title="Agregar Usuario" href="redireccion.php?action=nuevousuario">
+        <img src="img/plus.png" class="icons" style="height:20px;">
+        Nuevo Usuario
+    </a>
+    <br>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -20,7 +25,7 @@
                 $val = json_decode(json_encode($obj), true);
                 for ($i = 0; $i < sizeof($val); $i++) {
                     $id_usuario = $val[$i]['ID_Usuario'];
-                    $nombre_usuario =  $val[$i]['Nombre'];
+                    $nombre_usuario = $val[$i]['Nombre'];
                     $apellido_usuario = $val[$i]['Apellido'];
                     $cedula_usuario = $val[$i]['Cedula'];
                     $rol_usuario = $val[$i]['Rol'];
@@ -37,9 +42,9 @@
                             <?php echo $apellido_usuario ?>
                         </td>
                         <td>
-                            <?php if($rol_usuario == 2){
+                            <?php if ($rol_usuario == 2) {
                                 echo "Estudiante";
-                            }else if($rol_usuario == 3){
+                            } else if ($rol_usuario == 3) {
                                 echo "Profesor";
                             } ?>
                         </td>

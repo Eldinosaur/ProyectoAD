@@ -1,11 +1,6 @@
-.divFormulario{
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+.icons{
+    height: 20px;
 }
-
-
 .formularioLogin {
     padding-left: 20%;
     padding-right: 20%;
@@ -42,4 +37,10 @@
 
 .botonForm {
     padding: 30px;
+}
+.divFormulario{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }

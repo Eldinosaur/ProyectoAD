@@ -1,4 +1,9 @@
 <div class="divFormulario">
+    <a class="nav-link active; navTemplate" title="Agregar Equipo" href="redireccion.php?action=nuevoequipo">
+        <img src="img/plus.png" class="icons" style="height:20px;">
+        Nuevo Equipo
+    </a>
+    <br>
     <table class="table table-striped">
         <thead>
             <tr>
