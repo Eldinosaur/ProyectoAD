@@ -11,7 +11,7 @@
                 <th scope="col">Nombre</th>
                 <th scope="col">Marca</th>
                 <th scope="col">Estado</th>
-                <th scope="col">Acciones</th>
+                <th scope="col" colspan="2"><center>Acciones</center></th>
             </tr>
         </thead>
         <tbody>
@@ -57,13 +57,47 @@
                                 echo "Prestado";
                             } ?>
                         </td>
+                        
+                        <?php echo '
+                        <td>
+                            <form action ="redireccion.php?action=editarequipo" method="POST">
+                            <input type="text" name="id_equipo" id="id_equipo" value="'.$id_equipo.'" hidden>
+                            <input type="text" name="nombre_equipo" id="nombre_equipo" value="'.$nombre_equipo.'" hidden>
+                            <input type="text" name="marca_equipo" id="marca_equipo" value="'.$marca_equipo.'" hidden>
+                            <input type="text" name="detalle" id="detalle" value="'.$detalle_equipo.'" hidden>
+                            <input type="text" name="precio" id="precio" value="'.$precio_equipo.'" hidden>
+                            <input type="text" name="estado" id="estado" value="'.$estado_equipo.'" hidden>
+                            <input type="text" name="url" id="url" value="'.$url_imagen.'" hidden>
+                            <input type="text" name="codigo" id="codigo" value="'.$codigo_equipo.'" hidden>
+                                <button type="submit" class="btn" title="Editar" style="border:none;">
+                                    <img src="img/pencil.png" class ="icons">
+                                </button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action ="redireccion.php?action=editarestadoequipo" method="POST">
+                                <input type="text" name="id_equipo" id="id_equipo" value="'.$id_equipo.'" hidden>
+                                <input type="text" name="nombre_equipo" id="nombre_equipo" value="'.$nombre_equipo.'" hidden>
+                                <input type="text" name="marca_equipo" id="marca_equipo" value="'.$marca_equipo.'" hidden>
+                                <input type="text" name="detalle" id="detalle" value="'.$detalle_equipo.'" hidden>
+                                <input type="text" name="precio" id="precio" value="'.$precio_equipo.'" hidden>
+                                <input type="text" name="estado" id="estado" value="'.$estado_equipo.'" hidden>
+                                <input type="text" name="url" id="url" value="'.$url_imagen.'" hidden>
+                                <input type="text" name="codigo" id="codigo" value="'.$codigo_equipo.'" hidden>
+                                <button type="submit" class="btn" title="Editar" style="border:none;">
+                                    <img src="img/status.png" class ="icons">
+                                </button>
+                            </form>
+                        </td>
                     </tr>
-                    <?php
+                    ';
                 }
             } else {
                 ?>
             <tr>
-                <td colspan="3"><center>No existen equipos registrados</center></td>
+                <td colspan="3">
+                    <center>No existen equipos registrados</center>
+                </td>
             </tr>
             <?php
             } ?>

@@ -4,9 +4,9 @@ $nombre_equipo = $_POST['nombre_equipo'];
 $marca_equipo = $_POST['marca_equipo'];
 $detalle = $_POST['detalle'];
 $precio = $_POST['precio'];
-$estado = $_POST['estado'];
+$estado_equipo = $_POST['estado'];
 $url = $_POST['url'];
-$codigo = $_POST['codigo'];
+$codigo_equipo = $_POST['codigo'];
 ?>
 
 <head>
@@ -63,7 +63,6 @@ $codigo = $_POST['codigo'];
                         <th scope="col">Nombre</th>
                         <th scope="col">Marca</th>
                         <th scope="col">Estado</th>
-                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -93,6 +92,7 @@ $codigo = $_POST['codigo'];
                     </tr>
                 </tbody>
             </table>
+            <div><center> <h5>Imagen referencial</h5><img src="<?php echo $url?>" alt="" style="height: 150px"></center></div>
         </div>
         <form id="new">
             <input type="text" name="id" id="id" value="<?php echo $id_equipo ?>" hidden>
@@ -100,16 +100,16 @@ $codigo = $_POST['codigo'];
             <div class="mb-3">
                 <label for="estado" class="form-label" style="font-weight:bold;">Estado del Equipo</label>
                 <select class="form-control" name="estado" id="estado">
-                    <option value="1" <?php if ($estado == 1) {
+                    <option value="1" <?php if ($estado_equipo == 1) {
                         echo 'selected';
                     } ?>>Funcional</option>
-                    <option value="2" <?php if ($estado == 2) {
+                    <option value="2" <?php if ($estado_equipo == 2) {
                         echo 'selected';
                     } ?>>En Mantenimiento</option>
-                    <option value="3" <?php if ($estado == 3) {
+                    <option value="3" <?php if ($estado_equipo == 3) {
                         echo 'selected';
                     } ?>>Dañado</option>
-                    <option value="4" <?php if ($estado == 4) {
+                    <option value="4" <?php if ($estado_equipo == 4) {
                         echo 'selected';
                     } ?>>Bloqueado</option>
                 </select>

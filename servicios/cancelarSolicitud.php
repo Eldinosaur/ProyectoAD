@@ -10,7 +10,7 @@ $id = $_GET['id'];
 
 $result = false;
 
-    $sqlInsertInvernadero = "UPDATE `solicitudes` SET `Estado_Solicitud`='4' WHERE ID_Solicitud =".$id;
+    $sqlInsertInvernadero = "UPDATE `solicitudes` SET `Estado_Solicitud`='4', `Observacion_Solicitud`= 'Cancelado por el Usuario' WHERE ID_Solicitud =".$id;
     if ($mysqli->query($sqlInsertInvernadero) === TRUE) {
         $result = true;
     } else {

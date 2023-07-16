@@ -85,6 +85,7 @@ $codigo = $_POST['codigo'];
               <option value="4" <?php if($estado == 4){echo 'selected';}?>>Bloqueado</option>
             </select>
           </div>
+          <div><center> <h5>Imagen referencial</h5><img src="<?php echo $url?>" alt="" style="height: 150px"></center></div>
           <div class="mb-3">
             <label for="url" class="form-label" style="font-weight:bold;">Imagen Referencial</label>
             <input type="url" class="form-control" name="url" id="url" value="<?php echo $url?>" required>
