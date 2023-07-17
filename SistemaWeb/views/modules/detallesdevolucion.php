@@ -34,9 +34,9 @@ $observacion = $_POST['observacion'];
                 <label for="solicitud" class="form-label" style="font-weight:bold;">Estado de la Solicitud</label>
                 <p class="form-label" name="solicitud">
                     <?php
-                    if ($estado == 1) {
-                        echo "Aprobada";
-                    } elseif ($estado == 2) {
+                    if ($estado == 2) {
+                        echo "Finalizada";
+                    } elseif ($estado == 1) {
                         echo "Pendiente";
                     } 
                     ?>
