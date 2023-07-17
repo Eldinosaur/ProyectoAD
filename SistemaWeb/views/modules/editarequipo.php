@@ -77,7 +77,7 @@ $codigo = $_POST['codigo'];
             <input type="text" class="form-control" name="precio" id="precio" value="<?php echo $precio?>" required>
           </div>
           <div class="mb-3">
-            <label for="estado" class="form-label" style="font-weight:bold;">Marca del Equipo</label>
+            <label for="estado" class="form-label" style="font-weight:bold;">Estado del Equipo</label>
             <select class="form-control" name="estado" id="estado">
               <option value="1" <?php if($estado == 1){echo 'selected';}?>>Funcional</option>
               <option value="2" <?php if($estado == 2){echo 'selected';}?>>En Mantenimiento</option>

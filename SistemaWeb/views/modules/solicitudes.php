@@ -75,8 +75,38 @@
                                     }
                                     ?>
                                 </td>
-                            </tr>
-                            <?php
+                           <?php if($estado_solicitud ==  3){ echo '
+                           <td>
+                           <form action ="redireccion.php?action=editarestadosolicitud" method="POST">
+                           <input type="text" name="id_solicitud" id="id_solicitud" value="'.$id_solicitud.'" hidden>
+                           <input type="text" name="solicitante" id="solicitante" value="'.$solicitante.'" hidden>
+                           <input type="text" name="equipo" id="equipo" value="'.$equipo.'" hidden>
+                           <input type="text" name="id_equipo" id="id_equipo" value="'.$id_equipo_solicita.'" hidden>
+                           <input type="text" name="estado" id="estado" value="'.$estado_solicitud.'" hidden>
+                           <input type="text" name="observacion" id="observacion" value="'.$observacion_solicitud.'" hidden>
+                               <button type="submit" class="btn" title="Editar Estado" style="border:none;">
+                                   <img src="img/status.png" class ="icons">
+                               </button>
+                           </form>
+                       </td>
+
+                           
+                           ';}else{
+                            echo '
+                            <td>
+                           <form action ="redireccion.php?action=detallessolicitud" method="POST">
+                           <input type="text" name="id_solicitud" id="id_solicitud" value="'.$id_solicitud.'" hidden>
+                           <input type="text" name="solicitante" id="solicitante" value="'.$solicitante.'" hidden>
+                           <input type="text" name="equipo" id="equipo" value="'.$equipo.'" hidden>
+                           <input type="text" name="id_equipo" id="id_equipo" value="'.$id_equipo_solicita.'" hidden>
+                           <input type="text" name="estado" id="estado" value="'.$estado_solicitud.'" hidden>
+                           <input type="text" name="observacion" id="observacion" value="'.$observacion_solicitud.'" hidden>
+                               <button type="submit" class="btn" title="Ver Detalle" style="border:none;">
+                                   <img src="img/details.png" class ="icons">
+                               </button>
+                           </form>
+                       </td>
+                            </tr>';}
                         }
                     } else {
                         ?>

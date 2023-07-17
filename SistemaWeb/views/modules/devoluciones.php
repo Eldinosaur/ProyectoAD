@@ -54,8 +54,32 @@
                   }
                   ?>
                 </td>
-              </tr>
-              <?php
+                <?php if($estado_devolucion ==  1){ echo '
+                           <td>
+                           <form action ="redireccion.php?action=editarestadodevolucion" method="POST">
+                           <input type="text" name="id_solicitud" id="id_solicitud" value="'.$id_devolucion.'" hidden>
+                           <input type="text" name="estado" id="estado" value="'.$estado_devolucion.'" hidden>
+                           <input type="text" name="observacion" id="observacion" value="'.$observacion.'" hidden>
+                               <button type="submit" class="btn" title="Editar Estado" style="border:none;">
+                                   <img src="img/status.png" class ="icons">
+                               </button>
+                           </form>
+                       </td>
+
+                           
+                           ';}else{
+                            echo '
+                            <td>
+                           <form action ="redireccion.php?action=detallesdevolucion" method="POST">
+                           <input type="text" name="id_solicitud" id="id_solicitud" value="'.$id_devolucion.'" hidden>                           
+                           <input type="text" name="estado" id="estado" value="'.$estado_devolucion.'" hidden>
+                           <input type="text" name="observacion" id="observacion" value="'.$observacion.'" hidden>
+                               <button type="submit" class="btn" title="Ver Detalle" style="border:none;">
+                                   <img src="img/details.png" class ="icons">
+                               </button>
+                           </form>
+                       </td>
+                            </tr>';}
             }
           } else {
             ?>

@@ -50,8 +50,8 @@ $observacion = $_POST['observacion'];
 
 <body>
     <div class="divFormulario">
-        <div class="divTituloLogin">
-            <h4>Informacion del usuario</h4>
+        <div style="text-align:center;">
+            <h4>Informacion de la Solicitud</h4>
         </div>
         <div>
         <table class="table table-striped">
@@ -61,7 +61,6 @@ $observacion = $_POST['observacion'];
                     <th scope="col">Solicitante</th>
                     <th scope="col">Equipo Solicitado</th>
                     <th scope="col">Estado de la Solicitud</th>
-                    <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -77,15 +76,15 @@ $observacion = $_POST['observacion'];
                                 </td>
                                 <td>
                                     <?php
-                                    if ($estado_solicitud == 1) {
+                                    if ($estado == 1) {
                                         echo "Aprobada";
-                                    } elseif ($estado_solicitud == 2) {
+                                    } elseif ($estado== 2) {
                                         echo "Rechazado";
-                                    } elseif ($estado_solicitud == 3) {
+                                    } elseif ($estado== 3) {
                                         echo "Pendiente Aprobación";
-                                    } elseif ($estado_solicitud == 4) {
+                                    } elseif ($estado == 4) {
                                         echo "Cancelado";
-                                    } elseif ($estado_solicitud == 5) {
+                                    } elseif ($estado == 5) {
                                         echo "Cerrado";
                                     }
                                     ?>
@@ -99,11 +98,11 @@ $observacion = $_POST['observacion'];
             </table>
         </div>
         <form id="new">
-            <input type="text" name="id" id="id" value="<?php echo $id?>" hidden>
+            <input type="text" name="id" id="id" value="<?php echo $id_solicitud?>" hidden>
             <input type="text" name="aprueba" id="aprueba" value="<?php echo $_SESSION['id']?>" hidden>
             
             <div class="mb-3">
-                <label for="estado" class="form-label" style="font-weight:bold;">Marca del Equipo</label>
+                <label for="estado" class="form-label" style="font-weight:bold;">Estado de la Solicitud</label>
                 <select class="form-control" name="estado" id="estado">
                     <option value="1" <?php if ($estado == 1) {
                         echo 'selected';

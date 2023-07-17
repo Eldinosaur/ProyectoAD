@@ -95,8 +95,8 @@
             } else {
                 ?>
             <tr>
-                <td colspan="3">
-                    <center>No existen equipos registrados</center>
+                <td colspan="10">
+                    <center>No existen equipos registrados o Hubo un error al cargar los datos</center>
                 </td>
             </tr>
             <?php

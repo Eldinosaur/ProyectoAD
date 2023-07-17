@@ -23,7 +23,7 @@ $observacion = $_POST['observacion'];
             // Send the form data using AJAX
             $.ajax({
                 type: 'POST',
-                url: "https://laboratoriosad.000webhostapp.com/editarEstadoSolicitud.php",
+                url: "https://laboratoriosad.000webhostapp.com/editarEstadoDevolucion.php",
                 data: formData,
                 success: function (response) {
                     console.log(response);
@@ -56,7 +56,6 @@ $observacion = $_POST['observacion'];
                     <tr>
                         <th scope="col">N° Solicitud</th>
                         <th scope="col">Estado de la Solicitud</th>
-                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -66,7 +65,7 @@ $observacion = $_POST['observacion'];
                         </td>
                         <td>
                             <?php
-                            switch ($estado_devolucion) {
+                            switch ($estado) {
                                 case 1:
                                     echo "Pendiente";
                                     break;
@@ -82,7 +81,7 @@ $observacion = $_POST['observacion'];
             </table>
         </div>
         <form id="new">
-            <input type="text" name="id" id="id" value="<?php echo $id ?>" hidden>
+            <input type="text" name="id" id="id" value="<?php echo $id_solicitud?>" hidden>
             <input type="text" name="recibe" id="recibe" value="<?php echo $_SESSION['id'] ?>" hidden>
 
             <div class="mb-3">
@@ -98,18 +97,10 @@ $observacion = $_POST['observacion'];
             </div>
             <label for="estado_equipo" class="form-label" style="font-weight:bold;">Estado del Equipo</label>
                 <select class="form-control" name="estado_equipo" id="estado_equipo">
-                    <option value="1" <?php if ($estado == 1) {
-                        echo 'selected';
-                    } ?>>Funcional</option>
-                    <option value="2" <?php if ($estado == 2) {
-                        echo 'selected';
-                    } ?>>En Mantenimiento</option>
-                    <option value="3" <?php if ($estado == 3) {
-                        echo 'selected';
-                    } ?>>Dañado</option>
-                    <option value="4" <?php if ($estado == 4) {
-                        echo 'selected';
-                    } ?>>Bloqueado</option>
+                    <option value="1">Funcional</option>
+                    <option value="2">En Mantenimiento</option>
+                    <option value="3" >Dañado</option>
+                    <option value="4" >Bloqueado</option>
                 </select>
             <div class="mb-3">
                 <label for="observacion" class="form-label" style="font-weight:bold;">Observacion</label>

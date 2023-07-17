@@ -19,10 +19,12 @@ class EnlacesPaginas
             $enlacesModel == "solicitudescanceladas" ||
             $enlacesModel == "solicitudesfinalizadas" ||
             $enlacesModel == "editarestadosolicitud" ||
+            $enlacesModel == "detallessolicitud" ||
             $enlacesModel == "devoluciones" ||
             $enlacesModel == "devolucionespendientes" ||
             $enlacesModel == "devolucionesrecibidas" ||
-            $enlacesModel == "editarestadodevolucion"
+            $enlacesModel == "editarestadodevolucion" ||
+            $enlacesModel == "detallesdevolucion"
         ) {
             $module = "views/modules/" . $enlacesModel . ".php";
         } else {

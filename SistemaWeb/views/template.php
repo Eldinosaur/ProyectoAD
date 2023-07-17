@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bodyBack">
             <div class="container-fluid">
                 <a class="navbar-brand" href="redireccion.php?action=home">
-                    <img src="img/pc.png" class="avatar"> </a>
+                    <img src="img/pc.png" style="height: 50px;"> </a>
                 <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" title="Equipos" href="redireccion.php?action=equipos">Equipos</a>
