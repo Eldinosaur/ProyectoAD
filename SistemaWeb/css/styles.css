@@ -1,0 +1,46 @@
+.icons{
+    height: 20px;
+}
+.formularioLogin {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-top: none;
+    border-bottom: none;
+    border-color: #192841;
+    background-color: white;
+}
+
+.avatarLogin {
+    height: 40px;
+    width: 40px;
+    border-radius: 10%;
+}
+
+.divAvatarLogin {
+    text-align: center;
+}
+
+.divTituloLogin {
+    font-weight: bold;
+}
+
+.bodyBack {
+    background-color: #152238;
+}
+.avatar {
+    height: 50px;
+}
+
+.botonForm {
+    padding: 30px;
+}
+.divFormulario{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
