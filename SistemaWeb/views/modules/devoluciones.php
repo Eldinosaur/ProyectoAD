@@ -58,6 +58,7 @@
                            <td>
                            <form action ="redireccion.php?action=editarestadodevolucion" method="POST">
                            <input type="text" name="id_solicitud" id="id_solicitud" value="'.$id_devolucion.'" hidden>
+                           <input type="text" name="id_cambiar" id="id_cambiar" value="'.$id_solicitud.'" hidden>
                            <input type="text" name="estado" id="estado" value="'.$estado_devolucion.'" hidden>
                            <input type="text" name="observacion" id="observacion" value="'.$observacion.'" hidden>
                                <button type="submit" class="btn" title="Editar Estado" style="border:none;">

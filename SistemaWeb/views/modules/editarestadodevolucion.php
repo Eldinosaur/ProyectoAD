@@ -1,5 +1,6 @@
 <?php
 $id_solicitud = $_POST['id_solicitud'];
+$id_cambiar =$_POST['id_cambiar'];
 $estado = $_POST['estado'];
 $observacion = $_POST['observacion'];
 ?>
@@ -83,9 +84,10 @@ $observacion = $_POST['observacion'];
         <form id="new">
             <input type="text" name="id" id="id" value="<?php echo $id_solicitud?>" hidden>
             <input type="text" name="recibe" id="recibe" value="<?php echo $_SESSION['id'] ?>" hidden>
+            <input type="text" name="cambia" id="cambia" value="<?php echo $id_cambiar?>" hidden>
 
             <div class="mb-3">
-                <label for="estado" class="form-label" style="font-weight:bold;">Marca del Equipo</label>
+                <label for="estado" class="form-label" style="font-weight:bold;">Estado Solicitud</label>
                 <select class="form-control" name="estado" id="estado">
                     <option value="1" <?php if ($estado == 1) {
                         echo 'selected';
